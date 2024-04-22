@@ -27,7 +27,7 @@ public class DepartamentoServiceTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this.departamentoRepository);
+        MockitoAnnotations.openMocks(this);
         departamento = new Departamento();
         departamento.setId(10L);
         departamento.setNombre("Antioquia");

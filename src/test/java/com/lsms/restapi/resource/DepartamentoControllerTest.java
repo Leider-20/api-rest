@@ -29,7 +29,7 @@ public class DepartamentoControllerTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this.departamentoService);
+        MockitoAnnotations.openMocks(this);
         departamento = new Departamento();
         departamento.setId(10L);
         departamento.setNombre("Antioquia");
