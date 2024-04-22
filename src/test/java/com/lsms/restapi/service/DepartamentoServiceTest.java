@@ -49,16 +49,16 @@ public class DepartamentoServiceTest {
         assertNotNull(savedDepartamento, "El departamento guardado no debería ser nulo");
         assertEquals("Antioquia", savedDepartamento.getNombre(), "El nombre del departamento guardado no coincide");
 
-        verify(departamentoRepository, times(1)).save(eq(departamento));
+        verify(departamentoRepository, times(1)).save((departamento));
         System.out.println("El departamento registrado es: "+departamento);
     }
 
     @Test
     void getById() {
-        when(departamentoRepository.findById(eq(10L))).thenReturn(Optional.of(departamento));
+        when(departamentoRepository.findById((10L))).thenReturn(Optional.of(departamento));
         Departamento departamentoObtenido = departamentoService.getById(10L);
 
-        verify(departamentoRepository, times(1)).findById(eq(10L));
+        verify(departamentoRepository, times(1)).findById((10L));
         assertNotNull(departamentoObtenido);
         assertEquals("Antioquia", departamentoObtenido.getNombre());
 
@@ -75,19 +75,19 @@ public class DepartamentoServiceTest {
         assertEquals(departamento.getNombre(), savedDepartamento.getNombre(), "El nombre del modificado guardado no coincide");
         assertEquals(departamento.getId(), savedDepartamento.getId(), "El ID del departamento modificado no coincide");
 
-        verify(departamentoRepository, times(1)).save(eq(departamento));
+        verify(departamentoRepository, times(1)).save((departamento));
         System.out.println("El departamento registrado es: "+departamento);
     }
 
     @Test
     void delete() {
 
-        when(departamentoRepository.findById(eq(10L))).thenReturn(Optional.of(new Departamento()));
+        when(departamentoRepository.findById((10L))).thenReturn(Optional.of(new Departamento()));
         departamentoService.delete(10L);
 
-        verify(departamentoRepository, times(1)).deleteById(eq(10L));
-        verify(departamentoRepository, never()).findById(eq(10L));
-        verify(departamentoRepository, times(1)).deleteById(eq(10L));
+        verify(departamentoRepository, times(1)).deleteById((10L));
+        verify(departamentoRepository, never()).findById((10L));
+        verify(departamentoRepository, times(1)).deleteById((10L));
         System.out.println("Id del departamento eliminado es:"+10L);
 
     }
