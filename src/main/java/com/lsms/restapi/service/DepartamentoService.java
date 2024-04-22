@@ -21,7 +21,10 @@ public class DepartamentoService {
     }
 
     public Departamento getById(Long id){
-        return this.repository.findById(id).get();
+        if (this.repository.findById(id).isPresent()){
+            return this.repository.findById(id).get();
+        }
+        throw new IllegalArgumentException("No se encontró la ID");
     }
 
     public Departamento add(Departamento departamento){
@@ -33,7 +36,7 @@ public class DepartamentoService {
             dept.get().setNombre(departamento.getNombre());
             return this.repository.save(dept.get());
         }
-        throw new RuntimeException();
+        throw new IllegalArgumentException("No se encontró la ID");
     }
 
     public void delete(Long id){
