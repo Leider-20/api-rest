@@ -69,7 +69,7 @@ public class DepartamentoServiceTest {
     void update() {
         when(departamentoRepository.save(any(Departamento.class))).thenReturn(departamento);
 
-        Departamento savedDepartamento = departamentoService.getById(departamento.getId());
+        Departamento savedDepartamento = departamentoService.add(departamento);
 
         assertNotNull(savedDepartamento, "El departamento guardado no debería ser nulo");
         assertEquals(departamento.getNombre(), savedDepartamento.getNombre(), "El nombre del modificado guardado no coincide");

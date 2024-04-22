@@ -73,7 +73,7 @@ public class DepartamentoControllerTest {
     void update() {
         when(departamentoService.add(any(Departamento.class))).thenReturn(departamento);
 
-        Departamento savedDepartamento = departamentoController.getById(departamento.getId());
+        Departamento savedDepartamento = departamentoController.add(departamentoDTO);
 
         assertNotNull(savedDepartamento, "El departamento guardado no debería ser nulo");
         assertEquals(departamento.getNombre(), savedDepartamento.getNombre(), "El nombre del modificado guardado no coincide");
