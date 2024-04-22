@@ -21,8 +21,9 @@ public class DepartamentoService {
     }
 
     public Departamento getById(Long id){
-        if (this.repository.findById(id).isPresent()){
-            return this.repository.findById(id).get();
+        Optional<Departamento> dept = this.repository.findById(id);
+        if (dept.isPresent()){
+            return dept.get();
         }
         throw new IllegalArgumentException("No se encontró la ID");
     }
