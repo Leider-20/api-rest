@@ -29,7 +29,7 @@ public class DepartamentoController {
 
 
     @PostMapping(value = "/departamento")
-    public Departamento add(DepartamentoDTO departamentoDTO){
+    public Departamento add( @RequestBody  DepartamentoDTO departamentoDTO){
         Departamento dept = new Departamento();
         dept.setId(departamentoDTO.getId());
         dept.setNombre(departamentoDTO.getNombre());
