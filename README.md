@@ -1,2 +1,2 @@
 # api-rest
-app REST API usando SQL Server
+REST API usando SQL Server.
