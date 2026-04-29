@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de departamentos</title>
+    <link href="CSS/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class = contenedor>
+        <h1>Registrar departamentos</h1>
+        
+        <div class = "layout-bc" >
+            <label class="label">Registra los departamentos aquí:</label>
+            <input class = "input-text" type="text">
+        </div>
+
+        <div class = "layout-bc">
+            <input class="boton" type="submit" value = "Registrar">
+        </div>
+
+
+        <div class="contenedor-tabla">
+            <table class="tabla">  <!-- No le puse un clase (class) porque solo hay una tabla para modificar, entonces definí el tipo de elemento en la hoja de CSS para modificar generalmente las tablas -->
+                <thead>
+                    <tr>   <!-- "tr" para las filas -->
+                        <th class="columna-id">ID</th>  <!-- "th" para los diferentes encabezados -->
+                        <th>Nombre</th> 
+                    </tr>
+                </thead>
+                
+                <!--<tbody class = "cuerpoTabla">
+                    <tr>    "td" para las columnas que no son del encabezado 
+                       <td class="columna-id">1</td> 
+                       <td>d1</td> 
+                    </tr>
+                    <tr>
+                        <td class="columna-id">2</td> 
+                        <td>d2</td> 
+                    </tr>
+
+                </tbody> -->
+
+            </table>
+        </div>
+    </div>
+
+    <script src = "JS/scripts-S.js"></script>
+
+</body>
+</html>

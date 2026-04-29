@@ -1,0 +1,29 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+
+.layout-bc {
+    display: inline ;
+}
+.contenedor-tabla {
+    margin: 15px 0 0 0;  /*para posicionar el elemento*/
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 20%;
+    padding:  3px;
+}
+
+.columna-id {
+    width: 5%;
+    text-align: center;
+}
+
+.label {
+    font-size: 15px;
+}
