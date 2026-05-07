@@ -1,7 +1,7 @@
 # API-REST
 REST API para el registro de datos.
 * Backend hecho con:
-    * Java
+    * Java 11
     * SpringBoot
     * Maven
     * SQL Server
